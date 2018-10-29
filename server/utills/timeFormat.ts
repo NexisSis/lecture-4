@@ -1,5 +1,5 @@
-function timeFormat(seconds){
-    function pad(s){
+export default function timeFormat(seconds:number){
+    function pad(s:number){
         return (s < 10 ? '0' : '') + s;
     }
     var hours = Math.floor(seconds / (60*60));
@@ -9,4 +9,4 @@ function timeFormat(seconds){
     return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
 }
 
-module.exports = timeFormat;
+// module.exports = timeFormat;
